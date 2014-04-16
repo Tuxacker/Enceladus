@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+	background-color: #1FAEFF;
+	border-style: none;
+	font-size: 32px;
+	color:white;
+	font-family: "Segoe UI";
+}
+input[type=submit]{
+    width: 504px;  height: 40px;
+	color: transparent; background-color:#2E8DEF;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	border-style: solid;
+	border-color: #1FAEFF;
+	border-bottom-width: 1px;
+	background-image:url(button.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+input[type=text]{
+    width: 500px;  height: 34px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border-style: solid;
+	border-color: #1FAEFF;
+	border-bottom-width: 1px;
+	font-family: "Segoe UI";
+	font-size: 28px;
+}
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+}
+
+test{
+	@font-face{
+		font-family: segoeui;
+		src: url(segoeuil.ttf);
+	}
+	font-family: "segoeui";
+}

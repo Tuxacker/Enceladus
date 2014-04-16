@@ -1,3 +1,5 @@
+#!"C:\xampp\perl\bin\perl.exe"
+
 package parser;
 
 use strict;

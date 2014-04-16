@@ -1,0 +1,12 @@
+
+-------------
+Differentiating Node:[x][,5626][3][^5626] - Operator: ^5626
+
+
+Calling Subroutine:
+Right Index: 3
+Source Array: [x][,5626][3][^5626]
+Value of 3: ^5626, Operator ID: 5626
+Found ID 5626 at Index 1 with value: ,5626
+
+Differentiating x^n

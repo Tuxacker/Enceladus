@@ -1,5 +1,8 @@
-package function_analysis::diff;
+#!"C:\xampp\perl\bin\perl.exe"
 
+package diff;
+
+use Time::HiRes;
 use parser;
 use strict;
 use warnings;
@@ -537,9 +540,18 @@ sub print_array{
 	}
 }
 
+sub derive_main{
+	open(my $log, '>', 'last_expr.txt');
+	select $log;
+	my $in = $_[0];
+	my @func = lexer::function_split($in);
+	my @header = lexer::header_check($func[0]);
+	my $expr = lexer::token_prep($func[1], $header[1]);
+	$expr = diff::reverse_notation(diff::differentiate(parser::shunting_yard(parser::prep_function($expr))));
+	select STDOUT;
+	$expr =~ s/x/$header[1]/;
+	$expr = $header[0] . "(" . $header[1] . ")=" . $expr;
+	return $expr;
+}
 
-
-
-my $e = reverse_notation(differentiate(parser::shunting_yard(parser::prep_function("e^(2*x-5)+x^3"))));
-
-print $e;
+return (1);
